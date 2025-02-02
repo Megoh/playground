@@ -29,6 +29,7 @@ playground/
 This repository includes hands-on projects and code samples in the following areas:
 
 ### 🔹 Backend Development
+- **JUnit** – Unit testing framework for Java applications
 - **Spring Boot** – REST API development, dependency injection, and transaction management
 - **Spring Data JPA** – Database interactions, entity mappings, and performance tuning
 
