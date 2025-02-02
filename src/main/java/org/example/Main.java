@@ -1,9 +1,15 @@
 package org.example;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import java.util.ArrayDeque;
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+
         int[][] grid = {
                 {0, 0, 0},
                 {1, 1, 0},
@@ -61,18 +67,8 @@ public class Main {
     }
 
     private static boolean isValidMove(int newRow, int newCol, int[][] grid, boolean[][] visited) {
-        if (newRow < 0 || newRow >= grid.length || newCol < 0 || newCol >= grid.length) {
-            return false;
-        }
-
-        if (grid[newRow][newCol] == 1) {
-            return false;
-        }
-
-        if (visited[newRow][newCol]) {
-            return false;
-        }
-
-        return true;
+        return !(newRow < 0 || newRow >= grid.length || newCol < 0 || newCol >= grid.length)
+                && !(grid[newRow][newCol] == 1)
+                && !visited[newRow][newCol];
     }
 }
