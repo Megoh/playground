@@ -1,4 +1,4 @@
-package org.example;
+package org.example.algorithms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,14 +6,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class MainTest {
+public class ShortestPathBinaryMatrixTest {
     @Test
     void testValid1x1() {
         int[][] grid = {
                 {0},
         };
 
-        assertEquals(1, Main.shortestPathBinaryMatrix(grid));
+        assertEquals(1, ShortestPathBinaryMatrix.shortestPathBinaryMatrix(grid));
     }
 
     @Test
@@ -22,7 +22,7 @@ public class MainTest {
                 {1},
         };
 
-        assertEquals(-1, Main.shortestPathBinaryMatrix(grid));
+        assertEquals(-1, ShortestPathBinaryMatrix.shortestPathBinaryMatrix(grid));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class MainTest {
                 {0, 0},
         };
 
-        assertEquals(2, Main.shortestPathBinaryMatrix(grid));
+        assertEquals(2, ShortestPathBinaryMatrix.shortestPathBinaryMatrix(grid));
     }
 
     @Test
@@ -42,7 +42,7 @@ public class MainTest {
                 {1, 1},
         };
 
-        assertEquals(-1, Main.shortestPathBinaryMatrix(grid));
+        assertEquals(-1, ShortestPathBinaryMatrix.shortestPathBinaryMatrix(grid));
     }
 
     @Test
@@ -53,7 +53,7 @@ public class MainTest {
                 {1, 1, 0},
         };
 
-        assertEquals(4, Main.shortestPathBinaryMatrix(grid));
+        assertEquals(4, ShortestPathBinaryMatrix.shortestPathBinaryMatrix(grid));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class MainTest {
                 {1, 1, 0},
         };
 
-        assertEquals(3, Main.shortestPathBinaryMatrix(grid));
+        assertEquals(3, ShortestPathBinaryMatrix.shortestPathBinaryMatrix(grid));
     }
 
     @Test
@@ -76,6 +76,6 @@ public class MainTest {
                 {1, 1, 1, 0},
         };
 
-        assertEquals(-1, Main.shortestPathBinaryMatrix(grid));
+        assertEquals(-1, ShortestPathBinaryMatrix.shortestPathBinaryMatrix(grid));
     }
 }
